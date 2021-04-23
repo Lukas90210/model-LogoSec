@@ -1,0 +1,66 @@
+.showcase {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 400px;
+  position: relative;
+
+  h1 {
+    font-size: 40px;
+  }
+  p {
+    margin: 20px 0;
+  }
+
+  &-text {
+    animation: slideInFromLeft 1s ease-in;
+  }
+  .grid {
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+    overflow: visible;
+  }
+  //showcase-form
+
+  &-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    z-index: 100;
+    justify-self: flex-end;
+
+    animation: slideInFromRight 1s ease-in;
+    .form-control {
+      margin: 30px 0;
+    }
+
+    input[type="text"],     //sprawia, że są zaznaczone tylko inputy z wybranym typem
+    input[type="email"] {
+      border: 0;
+      border-bottom: 1px solid #b4becb;
+      width: 100%;
+      padding: 3px;
+      font-size: 16px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  //before and after
+
+  &::before,  //jest to krzywa powierzchnia pod samym niebieskim tłęm
+  &::after {
+    content: "";
+    position: absolute;
+    height: 105px;
+    background: #fff;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    transform: skewY(-2deg);
+  }
+}
+
+

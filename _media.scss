@@ -1,0 +1,80 @@
+@media (max-width: 968px) {
+  .showcase .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .showcase {
+    height: auto;
+
+    &-text {
+      text-align: center;
+      margin-top: 40px;
+    }
+    &-form {
+      margin: auto;
+      justify-self: center;
+    }
+  }
+}
+// TABLETS AND UNDER
+@media (max-width: 768px) {
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid,
+  .features-main .grid,
+  .docs-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    height: auto; //wazny element. Sprawdź co się stanie bez
+
+    &-text {
+      text-align: center;
+      margin-top: 40px;
+      animation: slideInFromTop 1s ease-in;
+    }
+    .showcase-form {
+      margin: auto;
+      justify-self: center;
+      animation: slideInFromBottom 1s ease-in;
+    }
+  }
+  .cli {
+    .grid {
+      img {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      *:nth-child(2) {
+        margin-top: -20px;
+      }
+    }
+  }
+  .features-head,
+  .features-sub-head,
+  .docs-head {
+    .container {
+      img {
+        justify-self: center;
+      }
+    }
+    text-align: center;
+  }
+}
+// MEDIA
+@media (max-width: 500px) {
+  .navbar {
+    height: 110px;
+    .flex {
+      flex-direction: column;
+    }
+    ul {
+      padding: 10px; //ważne
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}

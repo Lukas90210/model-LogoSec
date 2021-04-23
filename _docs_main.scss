@@ -1,0 +1,27 @@
+.docs-main {
+  h3 {
+    margin: 20px 0;
+    cursor: default;
+  }
+  .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+  }
+  nav li {
+    font-size: 17px;
+
+    a {
+      transition: 0.1s ease-in;
+      &:hover {
+        color: rosybrown;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .docs-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
